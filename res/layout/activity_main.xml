@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lin_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/tfIpAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/serverIp"
+            android:inputType="number|numberDecimal|phone" />
+
+        <EditText
+            android:id="@+id/tfPortNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/port"
+            android:inputType="number|numberDecimal|phone" />
+
+        <Button
+            android:id="@+id/btn_findServer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="buttonFindClickListener"
+            android:text="@string/find" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btn_connectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="buttonConnectClickListener"
+                android:text="@string/connect" />
+
+            <Button
+                android:id="@+id/btn_disconectButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="31dp"
+                android:onClick="buttonDisconnectActionListener"
+                android:text="@string/disconect" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lin_all"
+        android:layout_alignRight="@+id/lin_all"
+        android:layout_below="@+id/lin_all" >
+
+        <EditText
+            android:id="@+id/tv_sendDelay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/delay"
+            android:inputType="numberDecimal"
+            android:text="@string/delayTime" >
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+
+</RelativeLayout>
